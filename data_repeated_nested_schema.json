@@ -1,0 +1,16 @@
+[
+  {"name": "author", "type": "string", "mode": "REQUIRED"},
+
+  {"name": "book", "type": "RECORD", "mode": "REPEATED", "fields":
+    [
+      {"name": "title",            "type": "string" ,   "mode": "REQUIRED"},
+      {"name": "checked_out",      "type": "timestamp", "mode": "REPEATED"}
+    ]
+  },
+  {"name": "citiesLived", "type": "RECORD", "mode": "REPEATED", "fields":
+    [
+      {"name": "place", "type": "string"},
+      {"name": "yearsLived", "type": "integer", "mode": "REPEATED"}
+    ]
+  }
+]

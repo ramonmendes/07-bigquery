@@ -1,0 +1,20 @@
+{
+    "author": "melville",
+    "book": [{
+        "title": "Moby Dick",
+        "checked_out": ["2014-12-12 14:23", "2013-04-03 12:13"]
+    }],
+    "citiesLived": [{
+        "place": "CO",
+        "yearsLived": ["1986", "1987"]
+    }]
+} {
+    "author": "hardy",
+    "book": [{
+        "title": "Return of the Native",
+        "checked_out": ["1984-05-30 12:12", "1986-03-12 00:00", "1992-05-03 04:32"]
+    }, {
+        "title": "The Mayor of Casterbridge",
+        "checked_out": ["1943-06-23 12:12", "1986-03-12 00:00", "1992-05-03 04:32"]
+    }]
+}

@@ -1,0 +1,57 @@
+503  cd biquery/
+ 504  cd ..
+ 505  mv biquery/ bigquery
+ 506  cd bigquery/
+ 507  bq
+ 508  gcloud --help
+ 509  glcoud config list
+ 510  gcloud config list
+ 511  bq load --source_format=NEWLINE_DELIMITED_JSON course.nested book-data.json book-schema.json
+ 512  bq --help
+ 513  bq.py help
+ 514  man bq
+ 515  bq help load
+ 516  bq help
+ 517  bq mk course
+ 518  bq load --source_format=NEWLINE_DELIMITED_JSON course.nested book-data.json book-schema.json
+ 519  bq query 'select * from [course.nested]'
+ 520  bq query 'select name, book.title from [course.nested]'
+ 521  bq rm -t course.nested
+ 522  history
+ 523  bq load --source_format=NEWLINE_DELIMITED_JSON course.nested book2-data.json book2-schema.json
+ 524  bq query 'select name, city from [course.nested]'
+ 525  bq query 'select * from [course.nested]'
+ 526  bq query 'select * from flatten([course.nested],book)'
+ 527  bq rm -t course.nested
+ 528  bq load --source_format=NEWLINE_DELIMITED_JSON course.repeated_nested data_repeated_nested.json data_repeated_nested_schema.json
+ 529  ll
+ 530  bq load --source_format=NEWLINE_DELIMITED_JSON course.repeated_nested data_repeated_nested.json data_repeated_nested_schema.json
+ 531  bq query 'select name, book.title from [course.repeated_nested]'
+ 532  bq query 'select author, book.title from [course.repeated_nested]'
+ 533  bq query 'select * from [course.repeated_nested]'
+ 534  bq query 'select * from flatten([course.nested],book)'
+ 535  bq query 'select * from flatten([course.repeated_nested],book)'
+ 536  bq query 'select * from flatten([course.repeated_nested],book.cheked_out)'
+ 537  bq query 'select * from flatten([course.repeated_nested],book.checked_out)'
+ 538  bq query 'select author,book.* from flatten([course.repeated_nested],book)'
+ 539  bq query 'select author,book.*,citiesLived.* from flattern(flatten([course.repeated_nested],book),citiesLived)'
+ 540  bq query 'select author,book.*,citiesLived.* from flatten([course.repeated_nested],book),flattern([course.repeated_nested],citiesLived)'
+ 541  bq query 'select author,book.title,book.checked_out,citiesLived.* from flatten([course.repeated_nested],book),flattern([course.repeated_nested],citiesLived)'
+ 542  bq query 'select author,book.title,book.checked_out,citiesLived.place from flatten([course.repeated_nested],book),flattern([course.repeated_nested],citiesLived)'
+ 543  bq query 'select author,book.title,book.checked_out,citiesLived.place from flatten([course.repeated_nested],book)'
+ 544  bq query 'select author,book.title,book.checked_out from flatten([course.repeated_nested],book)'
+ 545  bq query 'select author,book.title,book.checked_out from flatten((select * from flattern(['course.repeated_nested'])),book)'
+ 546  bq query 'select author,book.title,book.checked_out from flatten((select * from flattern(['course.repeated_nested'],citiesLived)),book)'
+ 547  bq query 'select author,book.title,book.checked_out from flattern(flatten([course.repeated_nested],book),citiesLived)'
+ 548  bq query 'select author,book.title,book.checked_out from flatten(flatten([course.repeated_nested],book),citiesLived)'
+ 549  bq query 'select author,book.title,book.checked_out,place from flatten(flatten([course.repeated_nested],book),citiesLived)'
+ 550  bq query 'select author,book.title,book.checked_out,citiesLived.place from flatten(flatten([course.repeated_nested],book),citiesLived)'
+ 551  bq query 'select author,book.title,book.checked_out,citiesLived.place,citiesLived.yearsLived from flatten(flatten([course.repeated_nested],book),citiesLived)'
+ 552  bq query 'select author,book.title,book.checked_out,citiesLived.yearsLived from flatten(flatten([course.repeated_nested],book),citiesLived)'
+ 553  bq query 'select * from flatten(flatten([course.repeated_nested],book),citiesLived)'
+ 554  bq query 'select author,book.title,book.checked_out,citiesLived.yearsLived from flatten(flatten(flatten([course.repeated_nested],book),citiesLived),citiesLived.yearsLived)'
+ 555  bq query 'select * from flatten(flatten(flatten([course.repeated_nested],book),citiesLived),citiesLived.yearsLived)'
+ 556  bq query 'select * from flatten(flatten(flatten([course.repeated_nested],book),citiesLived),citiesLived.yearsLived) order by book_checked_out'
+ 557  bq query 'select * from flatten(flatten(flatten([course.repeated_nested],book),citiesLived),citiesLived.yearsLived) order by book.checked_out'
+ 558  $ bq rm -t course.repeated_nested
+ 559  bq rm -t course.repeated_nested

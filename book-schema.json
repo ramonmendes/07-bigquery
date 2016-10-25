@@ -1,0 +1,10 @@
+[
+  {"name": "name", "type": "string", "mode": "REQUIRED"},
+
+  {"name": "book", "type": "RECORD", "fields":
+    [
+    {"name": "title",            "type": "string"},
+    {"name": "ISBN",             "type": "string"}
+    ]
+  }
+]

@@ -1,0 +1,5 @@
+[
+  {"name": "name", "type": "string", "mode": "REQUIRED" },
+  {"name": "city", "type": "string", "mode": "REPEATED" },
+  {"name": "book", "type": "string", "mode": "REPEATED" }
+]
